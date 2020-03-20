@@ -13,6 +13,10 @@ To install dependencies<br />
 
 Runs the app in the development mode.<br />
 
+### `npm run start-dev`
+
+Runs the app in the development server.<br />
+
 ## License
 
 ISC

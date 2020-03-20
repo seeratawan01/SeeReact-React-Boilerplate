@@ -4,8 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: './src/index.js',
     output: {
-        path: path.resolve(__dirname, 'public'),
-        filename: 'index_bundle.js'
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'seer_bundle.js'
     },
     module: {
         rules: [
@@ -14,10 +14,16 @@ module.exports = {
         ]
     },
     plugins: [
-        new HtmlWebpackPlugin({ template: './src/index.html' })
+        new HtmlWebpackPlugin(
+            {
+                title: "SeeR React App",
+                template: './public/index.html',
+                filename: './index.html',
+            }
+        )
     ],
     devServer: {
-        contentBase: path.join(__dirname, 'public'),
+        contentBase: path.join(__dirname, 'dist'),
         compress: true,
         port: 9000
     },

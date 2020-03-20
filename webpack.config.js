@@ -1,6 +1,9 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const isDevelopment = process.env.NODE_ENV === 'development'
+
+
 module.exports = {
     entry: './src/index.js',
     output: {
@@ -35,6 +38,7 @@ module.exports = {
                 title: "SeeR React App",
                 template: './public/index.html',
                 filename: './index.html',
+                favicon: './public/favicon.ico'
             }
         )
     ],
@@ -43,4 +47,5 @@ module.exports = {
         compress: true,
         port: 3000
     },
+    mode: isDevelopment ? 'development' : 'production'
 }

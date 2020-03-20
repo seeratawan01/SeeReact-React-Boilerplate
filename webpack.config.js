@@ -8,7 +8,7 @@ module.exports = {
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'build'),
-        filename: 'seer_bundle.js'
+        filename: 'seereact_bundle.js'
     },
     module: {
         rules: [
@@ -25,17 +25,28 @@ module.exports = {
                 use: [{
                     loader: 'file-loader',
                     options: {
-                        outputPath: 'images',
+                        outputPath: 'images/',
                     },
                 }],
-
             },
+            {
+                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: 'fonts/'
+                        }
+                    }
+                ]
+            }
         ]
     },
     plugins: [
         new HtmlWebpackPlugin(
             {
-                title: "SeeR React App",
+                title: "SeeReact React App",
                 template: './public/index.html',
                 filename: './index.html',
                 favicon: './public/favicon.ico'

@@ -1,10 +1,9 @@
-const React = require('react')
-const ReactDOM = require('react-dom')
-require('./index.css')
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './index.css';
 
-const App = () => {
-    return <h1>SeeR React Boilerplate</h1>
-}
+import App from './App/App'
+
 
 ReactDOM.render(<App />, document.getElementById('app'))
 

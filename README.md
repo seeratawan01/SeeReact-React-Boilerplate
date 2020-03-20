@@ -7,15 +7,15 @@ This boilerplate is already configured for react app with [Babel](https://github
 
 ### `npm install`
 
-To install dependencies<br />
+To install dependencies.<br />
 
 ### `npm start`
 
-Runs the app in the development mode.<br />
+To runs the app in the development mode.<br />
 
 ### `npm run build`
 
-Build the React App.<br />
+To Build the React App.<br />
 
 ## License
 

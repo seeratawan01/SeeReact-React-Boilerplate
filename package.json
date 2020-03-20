@@ -10,8 +10,8 @@
     ]
   },
   "scripts": {
-    "start-dev": "webpack-dev-server --open",
-    "start": "webpack"
+    "start": "webpack-dev-server --mode development --open",
+    "build": "webpack --mode production"
   },
   "author": "Seerat Awan",
   "license": "ISC",

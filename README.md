@@ -9,13 +9,13 @@ This boilerplate is already configured for react app with [Babel](https://github
 
 To install dependencies<br />
 
-### `npm run start`
+### `npm start`
 
 Runs the app in the development mode.<br />
 
-### `npm run start-dev`
+### `npm run build`
 
-Runs the app in the development server.<br />
+Build the React App.<br />
 
 ## License
 

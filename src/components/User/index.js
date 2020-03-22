@@ -6,8 +6,6 @@ import { setUser, logOut } from '../../actions'
 const User = () => {
     const currentUser = useSelector(state => state.currentUser)
 
-    console.log(currentUser.loggedIn)
-
     const dispatch = useDispatch()
 
     // We will get this object from async call to backend

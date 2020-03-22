@@ -1,6 +1,8 @@
 import React from 'react'
-import logo from './logo.png';
-import './App.css'
+import logo from './assets/logo.png';
+import './assets/App.css'
+
+import User from '../User'
 
 const App = () => {
     return (
@@ -9,6 +11,7 @@ const App = () => {
                 <img src={logo} alt="Logo" width="250" />
                 <h1>SeeReact React Boilerplate</h1>
                 <a target="_blank" href="https://github.com/Xuntron/SeeReact-React-Boilerplate">Read More</a>
+                <User />
             </div>
         </div>
     )

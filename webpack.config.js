@@ -48,7 +48,7 @@ module.exports = {
         new HtmlWebpackPlugin(
             {
                 title: "SeeReact React App",
-                template: './public/index.html',
+                template: 'public/index.html',
                 filename: './index.html',
                 favicon: './public/favicon.ico'
             }
@@ -57,6 +57,9 @@ module.exports = {
             filename: './style.css',
         })
     ],
+    stats: {
+        children: false,
+    },
     devServer: {
         contentBase: path.join(__dirname, 'build'),
         compress: true,

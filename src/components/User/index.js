@@ -1,0 +1,40 @@
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux'
+import actions from '../../actions'
+
+
+const User = () => {
+    const currentUser = useSelector(state => state.currentUser)
+
+    const dispatch = useDispatch()
+
+    // We will get this object from async call to backend
+    const user = {
+        name: "Seerat",
+        token: 'sometoken'
+    }
+
+    useEffect(() => {
+        dispatch(actions.userActions.setUser(user))
+    }, [])
+
+    return (
+        <div className="user">
+            {
+                currentUser.loggedIn ?
+                    <>
+                        <h1>Hello, {currentUser.user.name}</h1>
+                        <button onClick={() => dispatch(actions.userActions.logOut())}>Logout</button>
+                    </>
+                    :
+                    <>
+                        <h1>Login</h1>
+                        <button onClick={() => dispatch(actions.userActions.setUser(user))}>Login</button>
+                    </>
+            }
+
+        </div>
+    );
+}
+
+export default User;

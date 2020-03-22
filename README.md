@@ -25,5 +25,5 @@ Builds the app for production to the build folder.
 
 ## License
 
-ISC
+MIT License
 

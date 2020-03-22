@@ -4,22 +4,23 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+
+    img {
+        animation: rotating 9s linear infinite;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+        font-weight: 500;
+        margin: 10px 0;
+    }
+
+    a {
+        color: #00d8ff;
+        font-size: 1.2rem;
+    }
 }
 
-.app img {
-    animation: rotating 9s linear infinite;
-}
-
-.app h1 {
-    font-size: 1.6rem;
-    font-weight: 500;
-    margin: 10px 0;
-}
-
-.app a {
-    color: #00d8ff;
-    font-size: 1.2rem;
-}
 
 @keyframes rotating {
     from {

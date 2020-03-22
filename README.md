@@ -7,6 +7,7 @@ This boilerplate is already configured for react app with [Babel](https://github
 * React Redux is implemented along with its Middleware
 * A live development server that warns about common mistakes.
 * A build script to bundle JS, CSS, and images for production
+* CSS/SASS/SCSS ready to use
 
 ## Qucik Start
 

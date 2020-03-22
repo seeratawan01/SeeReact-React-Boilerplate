@@ -1,6 +1,6 @@
 import React from 'react'
 import logo from './assets/logo.png';
-import './assets/App.css'
+import './assets/App.scss'
 
 import User from '../User'
 

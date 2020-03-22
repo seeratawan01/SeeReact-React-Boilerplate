@@ -150,6 +150,6 @@
         ],
         "use-isnan": "warn",
         "valid-typeof": "warn",
-        "getter-return": "warn",
+        "getter-return": "warn"
     }
 }

@@ -1,21 +1,26 @@
 # SeeReact - React Boilerplate 2020
 ### The Simple Scaleable Boilerplate For React
 
-This boilerplate is already configured for react app with [Babel](https://github.com/babel/babel) and [webpack](https://github.com/webpack/webpack) but you still can easily configure it in your own way.
+This boilerplate is already configured for react app with [Babel](https://github.com/babel/babel), [webpack](https://github.com/webpack/webpack) and [eslint](https://eslint.org/docs/rules/) but you still can easily configure it in your own way.
+
+### Additional Features
+* React Redux is implemented along with its Middleware
+* A live development server that warns about common mistakes.
+* A build script to bundle JS, CSS, and images for production
 
 ## Qucik Start
 
 ### `npm install`
 
-To install dependencies.<br />
+Install the dependencies.
 
 ### `npm start`
 
-To runs the app in the development mode.<br />
+Runs the app in development mode.
 
 ### `npm run build`
 
-To Build the React App.<br />
+Builds the app for production to the build folder.
 
 ## License
 

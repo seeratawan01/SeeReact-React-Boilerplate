@@ -3,7 +3,10 @@ import {
     LOG_OUT,
 } from '../actions/types';
 
-const currentUser = (state = {}, action) => {
+let user = JSON.parse(localStorage.getItem('user'));
+const initialState = user ? { loggedIn: true, user } : {};
+
+const currentUser = (state = initialState, action) => {
     switch (action.type) {
         case SET_USER:
             return {

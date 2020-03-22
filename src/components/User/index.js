@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
-import actions from '../../actions'
+import { setUser, logOut } from '../../actions'
 
 
 const User = () => {
     const currentUser = useSelector(state => state.currentUser)
+
+    console.log(currentUser.loggedIn)
 
     const dispatch = useDispatch()
 
@@ -14,9 +16,9 @@ const User = () => {
         token: 'sometoken'
     }
 
-    useEffect(() => {
-        dispatch(actions.userActions.setUser(user))
-    }, [])
+    // useEffect(() => {
+    //     dispatch(setUser(user))
+    // }, [])
 
     return (
         <div className="user">
@@ -24,12 +26,12 @@ const User = () => {
                 currentUser.loggedIn ?
                     <>
                         <h1>Hello, {currentUser.user.name}</h1>
-                        <button onClick={() => dispatch(actions.userActions.logOut())}>Logout</button>
+                        <button onClick={() => dispatch(logOut())}>Logout</button>
                     </>
                     :
                     <>
                         <h1>Login</h1>
-                        <button onClick={() => dispatch(actions.userActions.setUser(user))}>Login</button>
+                        <button onClick={() => dispatch(setUser(user))}>Login</button>
                     </>
             }
 

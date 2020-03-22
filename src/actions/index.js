@@ -1,9 +1,25 @@
-// Import All Actions
-import userActions from './userActions'
+import {
+    SET_USER,
+    LOG_OUT,
+} from './types';
 
-// Export as one Object
-const actions = {
-    userActions
+export const setUser = (userObj) => {
+    localStorage.setItem('user', JSON.stringify(userObj));
+    return {
+        type: SET_USER,
+        payload: userObj
+    }
 }
 
-export default actions
+export const logOut = () => {
+    // remove user from local storage to log user out
+    localStorage.removeItem('user');
+    return {
+        type: LOG_OUT
+    }
+}
+
+export default {
+    setUser,
+    logOut
+}
